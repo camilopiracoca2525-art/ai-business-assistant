@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Business Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <p class="eyebrow">PORTFOLIO PROJECT · LLM INTEGRATION</p>
+        <h1>AI Business Assistant</h1>
+        <p class="sub">A language model connected to a business-style application.</p>
+      </div>
+      <span id="mode" class="pill">Loading…</span>
+    </header>
+    <section class="layout">
+      <section class="panel chat-panel">
+        <div class="panel-title">
+          <h2>Assistant</h2>
+          <button id="clear" class="ghost">New conversation</button>
+        </div>
+        <div id="messages" class="messages">
+          <div class="bubble assistant">Hello! Ask me about a business process or automation idea.</div>
+        </div>
+        <form id="chat-form">
+          <textarea id="prompt" maxlength="4000" placeholder="Write a business question…" required></textarea>
+          <div class="form-foot">
+            <small>Do not enter confidential information.</small>
+            <button id="send" type="submit">Send message ↗</button>
+          </div>
+        </form>
+      </section>
+      <aside class="panel metrics">
+        <h2>Runtime metrics</h2>
+        <div class="metric"><span>Requests</span><strong id="requests">0</strong></div>
+        <div class="metric"><span>Average latency</span><strong id="latency">0 ms</strong></div>
+        <div class="metric"><span>Prompt tokens</span><strong id="input">0</strong></div>
+        <div class="metric"><span>Completion tokens</span><strong id="output">0</strong></div>
+        <div class="metric"><span>Estimated cost</span><strong id="cost">$0.000000</strong></div>
+        <p class="note">Mock token counts are rough estimates. Cost depends on configured provider pricing.</p>
+      </aside>
+    </section>
+    <footer>FastAPI · SQLite · LLM API · Rate limiting · Usage telemetry</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
