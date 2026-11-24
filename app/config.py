@@ -24,5 +24,6 @@ RATE_LIMIT_REQUESTS = max(1, integer("RATE_LIMIT_REQUESTS", 10))
 RATE_LIMIT_WINDOW_SECONDS = max(1, integer("RATE_LIMIT_WINDOW_SECONDS", 60))
 MAX_MESSAGE_CHARS = max(100, integer("MAX_MESSAGE_CHARS", 4000))
 MAX_HISTORY_MESSAGES = max(0, integer("MAX_HISTORY_MESSAGES", 8))
-INPUT_COST_PER_1M = max(0.0, number("INPUT_COST_PER_1M", 0.15))
-OUTPUT_COST_PER_1M = max(0.0, number("OUTPUT_COST_PER_1M", 0.60))
+# Configure current provider rates explicitly; zero means no cost estimate.
+INPUT_COST_PER_1M = max(0.0, number("INPUT_COST_PER_1M", 0.0))
+OUTPUT_COST_PER_1M = max(0.0, number("OUTPUT_COST_PER_1M", 0.0))
